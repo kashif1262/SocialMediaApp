@@ -10,7 +10,7 @@ import {
 import moment from "moment";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 import DeleteIcon from "@material-ui/icons/Delete";
-import MoreHoriz from "@material-ui/icons/MoreHoriz";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import useStyles from "./PostStyles";
 const Post = ({ post }) => {
   const classes = useStyles();
@@ -29,7 +29,7 @@ const Post = ({ post }) => {
       </div>
       <div className={classes.overlay2}>
         <Button style={{ color: "white" }} size="small" onClick={() => {}}>
-          <MoreHoriz fontSize="default" />
+          <MoreHorizIcon fontSize="medium" />
         </Button>
       </div>
       <div className={classes.details}>

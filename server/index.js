@@ -12,10 +12,15 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 const CONNECTIONURL =
-  "mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.0xo8i7x.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb://javascriptmastery:javascriptmastery123@ac-7dbzf7f-shard-00-00.g0eb1u9.mongodb.net:27017,ac-7dbzf7f-shard-00-01.g0eb1u9.mongodb.net:27017,ac-7dbzf7f-shard-00-02.g0eb1u9.mongodb.net:27017/?ssl=true&replicaSet=atlas-yrztgy-shard-0&authSource=admin&retryWrites=true&w=majority";
+
+//const CONNECTIONURL =
+//"mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.g0eb1u9.mongodb.net/?retryWrites=true&w=majority";
+//const CONNECTIONURL =
+//"mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.g0eb1u9.mongodb.net/test";
 const PORT = process.env.PORT || 5000;
 
-mongoose
+await mongoose
   .connect(CONNECTIONURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -23,4 +28,6 @@ mongoose
   .then(() =>
     app.listen(PORT, () => console.log(`server is running on port: ${PORT}`))
   )
-  .catch((error) => console.log(error));
+  .catch((error) => console.log(`${error} did not connect`));
+
+//mongoose.set("useFindAndModify", false);
