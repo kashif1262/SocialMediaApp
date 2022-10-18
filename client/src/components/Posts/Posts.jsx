@@ -9,6 +9,7 @@ const Posts = ({ setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   const classes = useStyles();
   console.log(posts);
+
   return !posts.length ? (
     <CircularProgress />
   ) : (
@@ -16,10 +17,10 @@ const Posts = ({ setCurrentId }) => {
       className={classes.container}
       container
       alignItems="stretch"
-      spacing={3}
+      spacing={2}
     >
       {posts.map((post) => (
-        <Grid key={post._id} item xs={12} sm={6}>
+        <Grid key={post._id} item xs={12} sm={3}>
           <Post post={post} setCurrentId={setCurrentId}></Post>
         </Grid>
       ))}
