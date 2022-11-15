@@ -1,0 +1,34 @@
+[{
+	_id:"",
+	event_id:"",
+	event_title:"",
+	event_description:"",
+	event_company:"",
+	event_banner:"",
+	event_start_date:"",
+	event_start_time:"",
+	event_end_date:"",
+	event_end_time:"",
+	event_take_place:{
+		{
+		message:"",
+		location:"",
+		type:"venue",
+		},
+		{
+		message:"",
+		type:"online",
+		},
+		{
+		message:"",
+		type:"recorded Event",
+		},
+	
+	
+	},
+	event_category:[],
+	
+	
+	
+
+}]
